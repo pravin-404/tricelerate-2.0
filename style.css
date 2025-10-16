@@ -1,3 +1,8 @@
+/* --- THIS IS THE NEW RULE TO FIX ZOOMING --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;800&display=swap');
 
 body {
@@ -9,6 +14,7 @@ body {
     color: #e5e7eb;
     padding: 1.5rem;
     background: linear-gradient(to bottom right, #111827, #171717, #000000);
+    margin: 0; /* Also good to ensure no default margin */
 }
 
 .event-card {
@@ -70,7 +76,6 @@ header h1 {
     font-weight: 500;
     cursor: pointer;
     width: 50%;
-    box-sizing: border-box;
 }
 
 .btn-primary {
@@ -184,23 +189,21 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
-/* --- UPDATED SECTION --- */
 .modal-footer {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;   /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
     margin-top: 2rem;
-    gap: 0.5rem;           /* Space between text and button */
+    gap: 0.5rem;
 }
 
 .contact-text {
     margin: 0;
     color: #9ca3af;
-    margin-bottom: 0.5rem; /* Add space below the text */
+    margin-bottom: 0.5rem;
 }
 
 .modal-footer .btn {
-    width: auto; /* Allow button to size to its content */
+    width: auto;
     text-align: center;
 }
-/* --- END OF UPDATED SECTION --- */
